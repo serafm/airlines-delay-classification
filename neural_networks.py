@@ -100,19 +100,6 @@ class MLP:
         print("Mean F1 score:", f'{best_cross_validation_score[1]:.2f}')
 
 
-""" Mobile Dataset """
-mobile_dataset = pd.read_csv("data/train_mobile.csv")
-y_mobile = mobile_dataset['price_range']
-x_mobile = mobile_dataset.drop(['price_range'], axis=1)
-
-# split data to train and test sets
-x_mobile_train, x_mobile_test, y_mobile_train, y_mobile_test = train_test_split(x_mobile, y_mobile, test_size=0.30, random_state=42)
-
-print("Mobile Data")
-mlp_mobile = MLP(x_mobile_train, x_mobile_test, y_mobile_train, y_mobile_test)
-mlp_mobile.mlpClassifier()
-mlp_mobile.mlpClassifierTwo()
-
 """ Airlines Delay """
 airlines_dataset = pd.read_csv('data/airlines_delay.csv')
 airlines_dataset.drop("Flight", axis=1, inplace=True)

@@ -2,7 +2,7 @@
 
 This project contains an implementation of four classification algorithms: K-Nearest Neighbors (KNN), Naive Bayes Classifier (NBC), Neural Networks (NN), and Support Vector Machines (SVM). The aim of this project is to classify data into different categories based on certain features.
 
-The datasets used in this project are from Kaggle, one for mobile price classification and the other for airline delay classification. The mobile price dataset contains features such as battery power, RAM, internal memory, and price range, while the airline delay dataset contains features such as airline name, origin airport, destination airport, and departure delay.
+The dataset used in this project is from Kaggle for airline delay classification. The dataset contains features such as airline name, origin airport, destination airport, and departure delay.
 
 ### Techniques Used
 Two techniques were used to evaluate the performance of the algorithms: train_test_split and 10-fold cross validation.

@@ -95,22 +95,6 @@ class SVM:
         print("Mean F1 score:", f'{best_cross_validation_score[1]:.2f}')
 
 
-""" Mobile Price """
-# load data from csv
-mobile_dataset = pd.read_csv("data/train_mobile.csv")
-
-y_mobile = mobile_dataset['price_range']
-x_mobile = mobile_dataset.drop(['price_range'], axis=1)
-
-# split data to train and test sets
-x_mobile_train, x_mobile_test, y_mobile_train, y_mobile_test = train_test_split(x_mobile, y_mobile, test_size=0.30, random_state=42)
-
-print("Mobile Dataset")
-svm_classifier_mobile = SVM(x_mobile_train, x_mobile_test, y_mobile_train, y_mobile_test)
-svm_classifier_mobile.linearSVM()
-svm_classifier_mobile.gaussianSVM()
-
-
 """ Airlines Delay """
 airlines_dataset = pd.read_csv('data/airlines_delay.csv')
 airlines_dataset.drop("Flight", axis=1, inplace=True)
